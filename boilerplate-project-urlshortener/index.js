@@ -45,7 +45,7 @@ app.post("/api/shorturl", (req, res) => {
       return res.send({ error: 'invalid url' })
     } else {
       postData.push({ original_url: url, short_url: number })
-      return res.send({ original_url: url, short_url: number })
+      res.send({ original_url: url, short_url: number })
       number = number + 1
     }
   });
